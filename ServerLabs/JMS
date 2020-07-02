@@ -1,7 +1,10 @@
 
 JMS FILTER:
 
-
+    
+            TopicSubscriber topicSubscriber
+                    = topicSession.createSubscriber((Topic) destination,"Nome = 'Barilla'",true); // filtering
+            
 
 Element	Description	Example Selector
 
