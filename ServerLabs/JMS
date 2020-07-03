@@ -35,7 +35,7 @@ cd/opt/
 cd activemq
 cd apache-activemq-5.15.10/bin
 
-sudo sh activemq star (password biar) 
+sudo sh activemq start (password biar) 
 per testare localhost:8161
 
 porsi nella cartella Server 
