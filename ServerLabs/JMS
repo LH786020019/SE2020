@@ -2,6 +2,21 @@
 JMS CLient:
 
     se il messaggio non è contenuto nelle proprieties ma nel body è parasabile così:
+     private final static Pattern statusPattern = Pattern.compile(".* : (.*)");
+    
+     String text = ((TextMessage)mex).getText();
+          
+
+            Matcher matcher = statusPattern.matcher(text);
+            if (matcher.find()) {
+                String status = matcher.group(1);
+                System.out.println("Arrived flight: " + flight + " has landed: " + status);
+                DatabaseManager.addFlight(flight, status); // o tri
+                
+            }
+           
+          
+          
     https://github.com/Giulio64/SE2020/blob/master/EXAMS/2019-09-Client/src/main/java/client/FlightListner.java
 
 JMS FILTER:
